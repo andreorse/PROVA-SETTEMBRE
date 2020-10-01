@@ -1,0 +1,4 @@
+Il programma utilizzerà 2 thread:
+- il main che richiederà la classe da visualizzare e alla fine ne visualizzerà  l'orario
+- un thread che andrà a cercare la classe nell'orario
+nei dati condivisi ci sarà la stringa contenente l'orario dei professori

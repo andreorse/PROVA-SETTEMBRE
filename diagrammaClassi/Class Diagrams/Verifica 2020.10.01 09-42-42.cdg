@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Verifica">
+  <ClassDiagramComponents>
+    <Class name="DatiCondivisi" package="verifica" visibility="public" xPosition="89.0" yPosition="201.0">
+      <Fields>
+        <Field name="orario" type="String" visibility="private"/>
+        <Field name="vect" type="String" visibility="private"/>
+        <Field name="classe" type="String" visibility="private"/>
+        <Field name="ris" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="classe"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getClasse" returnType="String" visibility="public"/>
+        <Method name="getVect" returnType="String" visibility="public">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="getVect" returnType="String[]" visibility="public"/>
+        <Method name="setRis" returnType="void" visibility="public">
+          <Argument type="String" name="ris"/>
+        </Method>
+        <Method name="getRis" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ThreadCerca" package="verifica" visibility="public" xPosition="415.0" yPosition="267.0">
+      <Fields>
+        <Field name="dc" type="DatiCondivisi" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DatiCondivisi" name="dc"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Verifica" package="verifica" visibility="public" xPosition="349.0" yPosition="26.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dc" source="verifica.ThreadCerca" target="verifica.DatiCondivisi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dc" source="verifica.Verifica" target="verifica.DatiCondivisi" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="t1" source="verifica.Verifica" target="verifica.ThreadCerca" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
